@@ -8,7 +8,7 @@ public class VidaPersonagem : MonoBehaviour
 {
 
     public Image cheia;
-    public static bool morto = false;
+  
 
      
 
@@ -30,18 +30,9 @@ public class VidaPersonagem : MonoBehaviour
 
         cheia.fillAmount = vida / 100;
 
-        if (vida <= 0)
-        {
-            GameOver();
-        }; 
+        
 
     }
-    static public  void GameOver()
-    {
-        
-        morto = true;
-        
-        
-    }
+  
     
 }

@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
 
+    public static Vector3 posicao; 
+
     private CharacterController characterController;
     private PlayerInput playerInput;
     private Animator animator;
@@ -96,6 +98,8 @@ public class Player : MonoBehaviour
         MovePlayer();
         AnimationHandler();
         RotationHandler();
+
+        posicao = transform.position;
     }
 
     private void RotationHandler()

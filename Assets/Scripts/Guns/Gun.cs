@@ -9,9 +9,15 @@ public class Gun : MonoBehaviour
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private AudioClip fireSound;
 
+
+    private void Start()
+    {
+        
+    }
     public void Fire()
     {
         //Executar animações, sons e efeitos de tiro da arma
         Instantiate(projectile, bulletSpawn.position, bulletSpawn.rotation);
+        AudioSource.PlayClipAtPoint(fireSound, transform.position, 10.0f);
     }
 }
